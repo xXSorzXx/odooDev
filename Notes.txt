@@ -1,0 +1,6 @@
+Actualizar modulo para BD
+    sudo docker exec -it odoo  odoo -d dbOdoo -u estate --stop-after-init
+ejecutar query desde docker
+    sudo docker exec -it dbOdoo  psql -U odoo -d dbOdoo -c "SELECT name, state FROM ir_module_module WHERE name = 'estate';"
+dar permiso a carpeta
+     sudo chmod a+rwx abc.py
