@@ -1,4 +1,5 @@
 odoo_base_modules/
+odoo_base_modules/addons
 odoo_base_modulesclear/
 # Byte-compiled / optimized / DLL files
 __pycache__/
