@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'estate',
+    'name': 'estateSor',
     'version': '1.2',
     'category': 'Sales/estate',
     'sequence': 15,
@@ -12,7 +12,10 @@
         'base',        
     ],
     'data': [     
-        'security/ir.model.access.csv' 
+        'security/ir.model.access.csv',
+
+        'views/estate_property_views.xml',
+        'views/estate_menus.xml'        
     ],
     'demo': [        
     ],
