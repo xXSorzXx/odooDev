@@ -10,5 +10,7 @@ dar permiso a carpeta
      sudo chmod a+rwx abc.py
 obtener modulos base
     docker cp odooCp:/usr/lib/python3/dist-packages/odoo/addons ./odoo_base_modules
+Ejecutar comando dentro de un contenedor
+    sudo docker exec -it odoo ls
 
-https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/04_securityintro.html
+https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/05_firstui.html

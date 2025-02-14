@@ -1,6 +1,7 @@
 odoo_base_modules/
 odoo_base_modules/addons
 odoo_base_modulesclear/
+postgresql/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

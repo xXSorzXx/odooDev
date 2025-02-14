@@ -14,8 +14,7 @@ services:
       - odoo_net
     volumes:
       - ./config:/etc/odoo
-      - ./mis_modulos:/mnt/extra-addons
-    command: ["odoo", "-d", "dbOdoo", "-u", "estate", "--stop-after-init"]
+      - ./mis_modulos:/mnt/extra-addons    
   db:
     container_name: dbOdoo
     image: postgres:15
