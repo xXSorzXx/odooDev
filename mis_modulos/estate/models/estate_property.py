@@ -5,12 +5,12 @@ class estate_property(models.Model):
     _description = "test jsor"
 
     name = fields.Char(required=True)
-    description = fields.Text(string="label Ui")
+    description = fields.Text(string="Description")
     postcode = fields.Char(help="help")
-    date_availability = fields.Date()
+    date_availability = fields.Date(copy=False, default=fields.Datetime.today)
     expected_price = fields.Float(required=True)
-    selling_price = fields.Float()
-    bedrooms = fields.Integer()
+    selling_price = fields.Float(readonly=True)
+    bedrooms = fields.Integer(default=2)
     living_area = fields.Integer()
     facades = fields.Integer()
     garage = fields.Boolean()

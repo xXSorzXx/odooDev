@@ -12,5 +12,10 @@ obtener modulos base
     docker cp odooCp:/usr/lib/python3/dist-packages/odoo/addons ./odoo_base_modules
 Ejecutar comando dentro de un contenedor
     sudo docker exec -it odoo ls
+Por si la pantalla queda blanca
+    debug=assets
+capturar log
+    docker logs -f nombre_contenedor_odoo
+Reserved Fields
 
 https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/05_firstui.html
