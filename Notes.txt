@@ -1,5 +1,8 @@
 Actualizar modulo para BD
     sudo docker exec -it odoo  odoo -d dbOdoo -u estate --stop-after-init
+    sudo docker exec -it nombre_contenedor_odoo odoo -u nombre_de_tu_modulo -d nombre_de_tu_base_de_datos
+conectar a odoo
+docker exec -it odoo bash
 conectar a la BD
     sudo docker exec -it dbOdoo  psql -U odoo -d dbOdoo
 ejecutar query desde docker
