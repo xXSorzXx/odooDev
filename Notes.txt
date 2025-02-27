@@ -21,4 +21,4 @@ capturar log
     docker logs -f nombre_contenedor_odoo
 Reserved Fields
 
-https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/05_firstui.html
+https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/07_relations.html
