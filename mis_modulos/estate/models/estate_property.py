@@ -1,4 +1,4 @@
-from odoo import fields,models # type: ignore
+from odoo import api, fields,models # type: ignore
 
 class estate_property(models.Model):
     _name = "estate_property"
@@ -33,3 +33,19 @@ class estate_property(models.Model):
     )
     property_type_id = fields.Many2one("estate_property_type", string="Property Type")
     offer_ids = fields.One2many('estate_property_offer', 'property_id')
+    total_area = fields.Integer(compute = "_total_area")
+    best_price = fields.Float(compute = "_best_price", string="Best Price")    
+
+    @api.depends('garden_area', 'living_area')
+    def _total_area(self):
+         for record in self:
+              record.total_area = record.living_area + record.garden_area
+    
+    @api.depends('offer_ids')
+    def _best_price(self):
+         for record in self:
+            if record.offer_ids:
+                record.best_price = max(record.offer_ids.mapped('price'))
+            else:
+                record.best_price = 0.0
+              

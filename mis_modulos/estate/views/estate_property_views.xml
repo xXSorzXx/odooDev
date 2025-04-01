@@ -63,11 +63,13 @@
                     </div>
                     <group>
                         <group>
+                            <field name="property_type_id" string = "Property Type"/>
                             <field name = "postcode" string = "PostCode" />  
                             <field name = "date_availability" string="Available From"/>
                         </group>
                         <group>
                             <field name="expected_price" string="Expected Price" />
+                            <field name="best_price" string = "Best Offer"/>
                             <field name="selling_price" string="Selling Price"/>
                         </group>    
                     </group>                        
@@ -79,13 +81,11 @@
                                 <field name="living_area" string="Living Area (sqm)"/>
                                 <field name="facades" string="Facades"/>
                                 <field name="garage" string="Garage"/>
-                                <field name="property_type_id"/>
                                 <field name="tag_ids" widget="many2many_tags"/>
                                 <field name="garden" string="Graden"/>
                                 <field name="garden_area" string="Garden Area (sqm)"/>
                                 <field name="garden_orientation" string="Garden Orientation"/>
-                                <field name="state" groups="base.group_no_one"/>
-                                <field name="active"/>   
+                                <field name="total_area" string="Total Area (sqm)"/>
                             </group>        
                         </page>   
                         <page string = "Other Info">
