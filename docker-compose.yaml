@@ -14,7 +14,8 @@ services:
       - odoo_net
     volumes:
       - ./config:/etc/odoo
-      - ./mis_modulos:/mnt/extra-addons    
+      - ./mis_modulos:/mnt/extra-addons   
+      - ./var_lib:/var/lib/odoo 
   db:
     container_name: dbOdoo
     image: postgres:15

@@ -21,6 +21,7 @@
                 <field name="garden"/>
                 <field name="garden_area"/>
                 <field name="garden_orientation"/>
+                <field name="property_type_id"/>
                 <field name="state"/>
                 <field name="active"/>
             </tree>
@@ -36,6 +37,7 @@
                 <field name="postcode"/>
                 <field name="expected_price"/>
                 <field name="bedrooms"/>
+                <field name="property_type_id"/>
                 <field name="living_area"/>
                 <field name="facades"/>
                 <separator/>
@@ -77,13 +79,26 @@
                                 <field name="living_area" string="Living Area (sqm)"/>
                                 <field name="facades" string="Facades"/>
                                 <field name="garage" string="Garage"/>
+                                <field name="property_type_id"/>
+                                <field name="tag_ids" widget="many2many_tags"/>
                                 <field name="garden" string="Graden"/>
                                 <field name="garden_area" string="Garden Area (sqm)"/>
                                 <field name="garden_orientation" string="Garden Orientation"/>
                                 <field name="state" groups="base.group_no_one"/>
                                 <field name="active"/>   
                             </group>        
-                        </page>                        
+                        </page>   
+                        <page string = "Other Info">
+                            <group>
+                                <field name="buyer" string="Buyer"/>
+                                <field name="sales_person" string="Sales Person"/>
+                            </group>
+                        </page>
+                        <page string="Offers">
+                            <group>
+                                <field name="offer_ids"/>
+                            </group>
+                        </page>
                     </notebook>                                                 
                 </sheet>
             </form>

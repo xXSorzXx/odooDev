@@ -1,4 +1,5 @@
 Actualizar modulo para BD
+    sudo docker compose up -d --build
     sudo docker exec -it odoo  odoo -d dbOdoo -u estate --stop-after-init
     sudo docker exec -it nombre_contenedor_odoo odoo -u nombre_de_tu_modulo -d nombre_de_tu_base_de_datos
 conectar a odoo
@@ -21,4 +22,4 @@ capturar log
     docker logs -f nombre_contenedor_odoo
 Reserved Fields
 
-https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/07_relations.html
+https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/08_compute_onchange.html
