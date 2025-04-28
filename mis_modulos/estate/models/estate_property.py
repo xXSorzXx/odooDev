@@ -1,4 +1,5 @@
 from odoo import api, fields,models # type: ignore
+from odoo.exceptions import UserError # type: ignore
 
 class estate_property(models.Model):
     _name = "estate_property"
@@ -49,3 +50,28 @@ class estate_property(models.Model):
             else:
                 record.best_price = 0.0
               
+    @api.onchange("garden")
+    def _onchange_garden(self):
+        if self.garden:
+            self.garden_area = 10
+            self.garden_orientation = 'north'
+        else:
+            self.garden_area = 0
+            self.garden_orientation = ''
+
+
+    def Sold(self):
+        for record in self:
+            if record.state != 'canceled':
+                record.state = 'sold'
+            else:
+                raise UserError("No se puede vender un registro cancelado.")
+        return True
+    
+    def Cancel(self):
+        for record in self:
+            if record.state != 'sold':
+                record.state = 'canceled'
+            else:
+                raise UserError("No se puede cancelar un registro vendido.")
+        return True

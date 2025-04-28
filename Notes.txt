@@ -22,4 +22,4 @@ capturar log
     docker logs -f nombre_contenedor_odoo
 Reserved Fields
 
-https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/08_compute_onchange.html
+https://www.odoo.com/documentation/17.0/th/developer/tutorials/server_framework_101/10_constraints.html
